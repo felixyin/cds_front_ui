@@ -1,0 +1,123 @@
+{
+  "name": "chenshi",
+  "version": "1.0.2",
+  "author": "上海晟时科技",
+  "description": "晟时科技",
+  "license": null,
+  "main": "./dist/electron/main.js",
+  "scripts": {
+    "rebuild": "./node_modules/./bin/electron-rebuild -f -w ",
+    "buildWindows": "node .electron-vue/build.js && electron-builder -w ",
+    "buildMacos": "node .electron-vue/build.js && electron-builder ",
+    "build:dir": "node .electron-vue/build.js && electron-builder --dir",
+    "build:clean": "cross-env BUILD_TARGET=clean node .electron-vue/build.js",
+    "build:web": "cross-env BUILD_TARGET=web node .electron-vue/build.js",
+    "dev": "node .electron-vue/dev-runner.js",
+    "pack": "npm run pack:main && npm run pack:renderer",
+    "pack:main": "cross-env NODE_ENV=production webpack --progress --colors --config .electron-vue/webpack.main.config.js",
+    "pack:renderer": "cross-env NODE_ENV=production webpack --progress --colors --config .electron-vue/webpack.renderer.config.js",
+    "postinstall": "",
+    "fix-memory-limit": "cross-env LIMIT=1024 increase-memory-limit"
+  },
+  "build": {
+    "productName": "晟时科技",
+    "copyright": "Copyright © 2018-2025 青岛前途软件技术有限公司",
+    "appId": "com.qdqtrj2.cds2",
+    "directories": {
+      "output": "build"
+    },
+    "extraResources": "*.md",
+    "extraFiles": "*.md",
+    "files": [
+      "dist/electron/**/*",
+      "*.md"
+    ],
+    "dmg": {
+      "contents": [
+        {
+          "x": 410,
+          "y": 150,
+          "type": "link",
+          "path": "/Applications"
+        },
+        {
+          "x": 130,
+          "y": 150,
+          "type": "file"
+        }
+      ]
+    },
+    "mac": {
+      "icon": "build/icons/icon.icns"
+    },
+    "win": {
+      "icon": "build/icons/icon.ico"
+    },
+    "linux": {
+      "icon": "build/icons"
+    }
+  },
+  "dependencies": {
+    "babel-plugin-component": "^1.1.1",
+    "cheerio": "^1.0.0-rc.3",
+    "crawler": "^1.2.1",
+    "delay": "^4.2.0",
+    "element-ui": "^2.7.2",
+    "email-verify": "^0.2.1",
+    "es7-sleep": "^1.0.0",
+    "export.js": "^1.0.0-alpha.1",
+    "lodash": "^4.17.11",
+    "moment": "^2.24.0",
+    "nodemailer": "^6.1.0",
+    "normalize-url": "^4.3.0",
+    "request": "^2.88.0",
+    "socket.io-client": "^2.2.0",
+    "super-pub-sub.js": "^1.0.1",
+    "user-agents": "^1.0.230",
+    "vue": "^2.6.10",
+    "vue-electron": "^1.0.6",
+    "vue-router": "^3.0.6",
+    "vue-worker": "^1.2.1",
+    "vuex": "^3.1.0",
+    "vuex-electron": "^1.0.3",
+    "windows-shortcuts": "^0.1.6"
+  },
+  "devDependencies": {
+    "ajv": "^6.10.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-0": "^6.24.1",
+    "babel-register": "^6.26.0",
+    "babili-webpack-plugin": "^0.1.2",
+    "cfonts": "^2.4.2",
+    "chalk": "^2.4.2",
+    "copy-webpack-plugin": "^5.0.2",
+    "cross-env": "^5.2.0",
+    "css-loader": "^2.1.1",
+    "del": "^4.1.0",
+    "devtron": "^1.4.0",
+    "electron": "^3.1.13",
+    "electron-builder": "^20.39.0",
+    "electron-debug": "^1.5.0",
+    "electron-devtools-installer": "^2.2.4",
+    "file-loader": "^3.0.1",
+    "html-webpack-plugin": "^3.2.0",
+    "increase-memory-limit": "^1.0.6",
+    "mini-css-extract-plugin": "0.6.0",
+    "multispinner": "^0.2.1",
+    "node-loader": "^0.6.0",
+    "style-loader": "^0.23.1",
+    "url-loader": "^1.1.2",
+    "vue-html-loader": "^1.2.4",
+    "vue-loader": "^15.7.0",
+    "vue-style-loader": "^4.1.2",
+    "vue-template-compiler": "^2.6.10",
+    "webpack": "^4.30.0",
+    "webpack-cli": "^3.3.0",
+    "webpack-dev-server": "^3.3.1",
+    "webpack-hot-middleware": "^2.24.4",
+    "webpack-merge": "^4.2.1"
+  }
+}

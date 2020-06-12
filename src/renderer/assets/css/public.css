@@ -1,0 +1,235 @@
+html,body,#app{
+    height: 100%;
+    margin: 0;
+    font-family:PingFang-SC-Medium;
+}
+body{
+    /*-webkit-user-select:none;*/
+    /*-moz-user-select:none;*/
+    /*-ms-user-select:none;*/
+    /*user-select:none;*/
+}
+*{
+    box-sizing: border-box;
+}
+.board{
+    background:#ffffff;
+    box-shadow:0px 1px 8px 0px rgba(124,124,124,0.3);
+    border-radius:10px;
+    padding: 15px 15px;
+    position: relative;
+}
+.flex-bg-ac{
+    display: -webkit-flex; /* Safari */
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+.el-input__inner{
+    height: 30px;
+    line-height: 30px;
+}
+.el-form-item__label{
+    line-height: 30px;
+    margin-top: 5px;
+}
+.el-input-number{
+    line-height: 28px;
+}
+.el-input-number__decrease, .el-input-number__increase{
+    width: 28px;
+    height: 28px;
+}
+/**********文字样式开始************/
+.text-weight-600{
+    font-weight: 600;
+}
+.text-main-22{
+    color: #368AE3;
+    font-size: 22px;
+}
+.text-main-18{
+    color: #368AE3;
+    font-size: 18px;
+}
+.text-main-16{
+    color: #368AE3;
+    font-size: 16px;
+}
+.text-main-14{
+    color: #368AE3;
+    font-size: 14px;
+}
+.text-main-12{
+    color: #368AE3;
+    font-size: 12px;
+}
+.text-333-16{
+    color: #333333;
+    font-size: 16px;
+}
+.text-333-15{
+    color: #333333;
+    font-size: 15px;
+}
+.text-333-14{
+    color: #333333;
+    font-size: 14px;
+}
+.text-333-12{
+    color: #333333;
+    font-size: 12px;
+}
+.text-999-14{
+    color: #999999;
+    font-size: 14px;
+}
+.text-999-13{
+    color: #999999;
+    font-size: 14px;
+}
+.text-999-12{
+    color: #999999;
+    font-size: 12px;
+}
+.text-666-14{
+    color: #666666;
+    font-size: 14px;
+}
+.text-666-13{
+    color: #666666;
+    font-size: 14px;
+}
+.text-666-12{
+    color: #666666;
+    font-size: 12px;
+}
+.text-555-14{
+    color: #555555;
+    font-size: 14px;
+}
+.text-orange-14{
+    color: #FB7302;
+    font-size: 14px;
+}
+.text-ellipsis-1L-20LH{
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+    height: 20px;
+    line-height: 20px;
+}
+.text-ellipsis-2L-20LH{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    height: 40px;
+    line-height: 20px;
+}
+/**********文字样式结束************/
+
+/**********底部边框开始************/
+.border-b-8-noLast{
+    border-bottom: 1px solid #D8D8D8;
+    padding-bottom: 8px;
+}
+.border-b-8-noLast:last-child{
+    border-bottom: 0;
+}
+/**********底部边框结束************/
+
+/**********间距开始************/
+.margin-t-5{
+    margin-top: 5px;
+}
+.margin-t-8{
+    margin-top: 8px;
+}
+.margin-t-15{
+    margin-top: 15px;
+}
+.margin-b-15{
+    margin-bottom: 15px;
+}
+.margin-b-8{
+    margin-bottom: 8px;
+}
+.margin-l-8{
+    margin-left: 8px;
+}
+/**********间距结束************/
+
+/**********内间距开始************/
+.padding-13-8{
+    padding: 13px 8px;
+}
+/**********内间距结束************/
+
+
+/**********背景色开始************/
+.backColor-F6{
+    background-color: #F6F6F6;
+}
+/**********背景色结束************/
+
+
+/**********等分图片展示开始************/
+.img-split-3{
+    width: calc(33.3% - 7px);
+    margin-bottom: 5px;
+}
+/**********等分图片展示结束************/
+
+
+/**********布局开始************/
+/*两端分布 垂直中心线对齐*/
+.flex-jsb-aic{
+    display: -webkit-flex;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/*两端分布 头部线对齐*/
+.flex-jsb-as{
+    display: -webkit-flex;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+}
+/*垂直中心线对齐*/
+.flex-aic{
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+/*竖直排列-头尾对齐*/
+.flex-column-c-jsb{
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+}
+/*竖直排列-水平中间对齐*/
+.flex-column-c-jcc{
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    align-items: center;
+}
+/**********布局结束************/
+.el-button{
+    line-height: 4px;
+}
+.right-title{
+    position: absolute;
+    right: 15px;
+    top: 17px;
+}
+.el-input__icon{
+    line-height: 30px;
+}
